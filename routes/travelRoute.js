@@ -4,7 +4,7 @@ const route = express.Router();
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
-let now = new Date()
+// let now = new Date()
 // console.log(now.getTime().toString())
 // storage
 const Storage = multer.diskStorage({

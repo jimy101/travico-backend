@@ -1,0 +1,36 @@
+
+   addForm.addEventListener("submit", addTravel);
+      async function addTravel(event) {
+        event.preventDefault();
+        let newtitle = document.getElementsByName("title")[0];
+        let newbody = document.getElementsByName("travelBody")[0];
+        let newImage = document.getElementsByName("image")[0];
+        let newprice = document.getElementsByName("price")[0];
+        let newcategory = document.getElementsByName("category")[0];
+        var myHeaders = new Headers();
+        myHeaders.append(
+          "Authorization",
+          "authHeader eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2NWIyMjUwYjk5YWVhMmJkNGMyM2RjNjIiLCJ1c2VyTmFtZSI6ImppbXkiLCJlbWFpbCI6ImppbXlAdGVzdC5jb20iLCJwYXNzd29yZCI6IiQyYiQwNSRLb0VaR1p2MGdsZzRqY1BHS25QZlBld0FpNkliUkFuZy9COTMxQ04yd2F1NTZJMDFWZTdqSyIsIl9fdiI6MH0.52Mnrsnuq4voLXCK0gyYUZCAw27kOUdhX-Bxcop_hjM"
+        );
+        myHeaders.append("Cookie", "Cookie_1=value");
+
+        var formdata = new FormData();
+        formdata.append("title", newtitle.value);
+        formdata.append("body", newbody.value);
+        formdata.append("price", newprice.value);
+        formdata.append("imgUrl", newImage.files[0]);
+        formdata.append("cat", newcategory.value);
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: formdata,
+          redirect: "follow",
+        };
+
+        fetch("http://localhost:5000/travels/add", requestOptions)
+          .then((response) => response.text())
+          .then((result) => console.log(result))
+          .catch((error) => console.log("error", error));
+      }
+   

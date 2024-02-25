@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style></style>
+    <title>Notre agence</title>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav
+      class="navbar sticky-top sticky-sm-top navbar-expand-lg text-dark bg-light"
+    >
+      <div class="container">
+        <a class="navbar-brand text-dark fs-3 fw-bold" href="#">Notre agence</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-underline mx-auto end-0 me-0 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mx-2 fs-5 active" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 fs-5" href="#packedges"
+                >Packedges</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 ms-2" href="./ContactFrom/contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link fs-5 ms-2 btn btn-warning"
+                href="../../dashboard/travel/login.html"
+                >Dashboard <sub>for Admins</sub></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- cursol -->
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner position-relative cars">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img
+            loading="lazy"
+            src="../assests/cairo-1980350_1920.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            loading="lazy"
+            src="../assests/egypt-3316848_1920.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            loading="lazy"
+            src="../assests/flower-2802220_1920.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            loading="lazy"
+            src="../assests/nile-495098_1920.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            loading="lazy"
+            src="../assests/temple-2397018_1920.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+    <div class="heading position-absolute mx-auto z-3">
+      <h1 class="fw-bold text-light mb-5 display-1 text-center shadow">Notre agence</h1>
+      <h1 class="fw-bold display-2 text-light text-center">
+        Your Gate To Egypt
+      </h1>
+    </div>
+    <!-- end of heading -->
+    <!-- cards -->
+    <div id="packedges" class="items container mt-5">
+      <div id="travels-div" class="row item-group g-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+      </div>
+    </div>
+    <!-- ending of cards -->
+    <!-- comments section -->
+    <div id="comments" class="container comments mt-5">
+      <h1 class="text-primary">Comments</h1>
+      <div class="divider bg-body-secondary m-3"></div>
+      <!-- cards -->
+      <div class="comment-cards">
+        <!-- <div class="comment-card m-4 d-flex border border-1 rounded-3">
+          <div class="image rounded-3">
+            <img
+              src="../assests/Profile-Icon-SVG-09856789-300x300.webp"
+              alt=""
+            />
+          </div>
+          <div class="content mx-4">
+            <h3>author</h3>
+            <p>body dddddddddddddddddddddd</p>
+          </div>
+        </div> -->
+        <div class="divider bg-body-secondary m-3"></div>
+      </div>
+      <h1 class="text-primary">Give your feedback</h1>
+      <!-- add Comment form -->
+      <form
+        id="commentForm"
+        class="mx-0 mt-3 gx-5 pb-4 rounded-3 gy-4 row bg-body-secondary"
+      >
+        <div class="col-md-3">
+          <label class="form-label fs-4">name:</label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            name="author"
+            aria-describedby="title"
+          />
+        </div>
+        <div class="col-md-9">
+          <label class="form-label fs-4">comment:</label>
+          <input type="text" class="form-control" required name="commentBody" />
+        </div>
+        <div class="col-12">
+          <input
+            type="submit"
+            value="Send feedback"
+            class="btn btn-outline-info"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- end of comments -->
+    <!-- footer -->
+    <footer id="footer" class="home-footer bg-dark mt-5">
+      <div class="container ">
+        <div class="row text-light">
+          <h1>Notre agence</h1>
+          <p>Nous sommes spécialistes dans  l'organisation de voyage type aventure humaine, on s'engage à vous faire rencontrer les populations locales, pour connaître leur culture et leur histoire et vous faire  vivre des moments de partage avec eux. Capable d'organiser des voyages et des activités sur mesure et en Petit groupe avec des prix adaptés à vos demandes.</p>
+        </div>
+        <!-- <div
+          class="row row-cols-1 row-cols-md-2 justify-content-center justify-content-md-between"
+        > -->
+        <!-- form -->
+
+        <!--  -->
+          <!-- <div class="send d-flex align-items-center">
+            <input type="text" placeholder="Contact with Us" />
+            <p class="text-bg-success">Send</p>
+          </div> -->
+          <div class="row justify-content-center align-items-center">
+            <ul class="list-unstyled= text-center">
+              <li>
+                <a
+                  class="text-decoration-none text-light fs-5 mb-2"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-decoration-none text-light fs-5 mb-2"
+                  href="#Packedges"
+                  >Packedges</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-decoration-none text-light fs-5 mb-2"
+                  href="./ContactFrom/contact.html"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <p class="text-light text-center">
+            All Copy &copy; Right Reserved for Travico 2023
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="contactForm"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="sendForm" class="mx-0 mt-3 gx-5 gy-4 row">
+              <div class="col-12">
+                <label for="title" class="form-label">places to visit :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  name="places"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="title" class="form-label">name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  name="visitorName"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="travelBody" class="form-label">email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  required
+                  name="visitorEmail"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="travelBody" class="form-label">nationality:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  required
+                  name="nationality"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="price" class="form-label"
+                  >number of visitors :</label
+                >
+                <input
+                  required
+                  type="number"
+                  class="form-control"
+                  name="numberOfVisitors"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="price" class="form-label">phone :</label>
+                <input required type="text" class="form-control" name="visitorPhone" />
+              </div>
+              <div class="col-md-6">
+                <label for="price" class="form-label">visit date :</label>
+                <input
+                  required
+                  type="date"
+                  class="form-control"
+                  name="visitDate"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="price" class="form-label">how many days :</label>
+                <input
+                  required
+                  type="number"
+                  class="form-control"
+                  name="days"
+                />
+              </div>
+              <div class="modal-footer">
+                <div class="col-12">
+                  <input
+                    type="submit"
+                    value="send"
+                    class="btn btn-success"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/index.js"></script>
+    <script></script>
+  </body>
+</html>

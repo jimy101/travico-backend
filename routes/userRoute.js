@@ -36,12 +36,11 @@ route.post("/register", async (req, res) => {
 route.post("/login", async (req, res) => {
   let { email, password } = req.body;
   let data = await UserController.Login(email);
-  console.log(req.body)
+  // console.log(req.body)
   const match = await bcryt.compare(password, data.password);
   if (match) {
     let token = jwt.sign(JSON.stringify(data), "secret", (err, token) => {
       // here we store it in local storage
-      // localStorage.setItem("token", token);
       res.json(token);
     });
   } else {

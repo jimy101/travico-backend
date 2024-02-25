@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="../css/style.css" /> -->
+    <title>login</title>
+  </head>
+  <body class="row align-items-center">
+    <form
+      class="col-10 col-md-4 mx-auto mt-5 gy-4 bg-body-secondary row border rounded-4 border-1"
+    >
+      <div class="col-12 col-sm-10">
+        <label for="Email" class="form-label">Email:</label>
+        <input type="text" required class="form-control" name="email" />
+      </div>
+      <div class="col-12 col-sm-10">
+        <label for="password" class="form-label">Password:</label>
+        <input
+          type="password"
+          class="form-control"
+          name="Password"
+          required
+          aria-describedby="password"
+        />
+      </div>
+      <div class="col-12"></div>
+      <div class="w-auto my-3">
+        <input type="submit" class="btn btn-success" value="Log in" />
+      </div>
+    </form>
+  </body>
+
+  <!-- js -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="../js/main.js"></script> -->
+  <script>
+    const logForm = document.getElementsByTagName("form")[0];
+    const enteredEmail = document.getElementsByName("email")[0];
+    const enteredPassword = document.getElementsByName("Password")[0];
+    logForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      let body = JSON.stringify({
+        email: enteredEmail.value,
+        password: enteredPassword.value,
+      });
+      const response = await fetch("http://localhost:5000/users/login", {
+        method: "POST",
+        headers: {
+          Accept: "application.json",
+          "Content-Type": "application/json",
+        },
+        body: body,
+        redirect: "follow",
+      });
+      const token = await response.json();
+      console.log(token)
+      localStorage.setItem("token", "authHeader " + token);
+      location.assign('../index.html')
+    });
+  </script>
+</html>
