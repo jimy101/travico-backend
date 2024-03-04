@@ -51,8 +51,8 @@ const AddTravel = async (req, res) => {
     } else {
       console.log(req.body);
       console.log(req.file);
-      let imgUrl = await req.file.finalDist;
-      await cloudinary.uploader.upload(imgUrl, function (error, result) {
+      let imgPath = await req.file.path;
+      await cloudinary.uploader.upload(imgPath, function (error, result) {
         console.log(result);
         let imgSrc = result.url;
         let imgScureSrc = result.secure_url;
@@ -63,7 +63,7 @@ const AddTravel = async (req, res) => {
           price,
           imgSrc,
           imgScureSrc,
-          // imgUrl,
+          imgUrl:imgPath,
           cat,
         });
         if (data == undefined) {
@@ -96,10 +96,10 @@ const EditTravel = async (req, res) => {
     if (err) {
       res.sendStatus(403);
     } else {
-      let imgUrl = await req.file.finalDist;
+      let imgPath = await req.file.path;
       console.log(req.body);
       console.log(req.file);
-      await cloudinary.uploader.upload(imgUrl, async function (error, result) {
+      await cloudinary.uploader.upload(imgPath, async function (error, result) {
         console.log(result);
         let imgSrc = result.url;
         let imgScureSrc = result.secure_url;
@@ -109,7 +109,7 @@ const EditTravel = async (req, res) => {
           {
             title: title,
             body: body,
-            // imgUrl: imgUrl,
+            imgUrl: imgPath,
             imgSrc: imgSrc,
             imgScureSrc: imgScureSrc,
             price: price,

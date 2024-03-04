@@ -13,10 +13,10 @@ const travelSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  // imgUrl: {
-  //   type: String,
-  //   // required: true,
-  // },
+  imgUrl: {
+    type: String,
+    // required: true,
+  },
   imgSrc: {
     type: String,
     // required: true,
